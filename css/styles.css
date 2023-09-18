@@ -526,6 +526,78 @@ img{
     height: 24px;
     width: 24px;
 }
+
+/* Footer Email Section */
+.footer__email__container{
+    display: flex;
+    flex-direction: column;
+}
+
+.email__container__txt{
+    margin-left: 80px;
+    color: var(--WHITE, #FFF);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    margin-bottom: 10px;
+}
+.footer__form{
+    margin-left: 80px;
+    display: flex;
+    gap: 16px;
+}
+
+.footer__form input{
+    padding: 8px 0;
+    padding-left: 16px;
+    height: 40px;   
+    width: 264px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+    background: transparent;
+    border: 1px solid var(--white);
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    color: var(--white);
+}
+
+.footer__form input::placeholder{
+    color: var(--white);
+}
+
+.submit__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-radius: 4px;
+    background-color: var(--iris);
+    padding: 8px 24px;
+    color: var(--white);
+    border: none;
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.submit__button:hover{
+    background-color: var(--ocean);
+}
+
+.submit__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.submit__container svg{
+    fill: var(--white);
+    margin-left: 8px;
+}
 /* Buttons Section Portfolio */
 .btn{
     padding-top: 96px;
