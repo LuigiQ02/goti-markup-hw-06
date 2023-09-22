@@ -805,8 +805,9 @@ img{
     color: white;
 }
 
+/* Modal Content */
 .modal__header{
-    padding: 72px 24px 16px 24px;
+    padding: 72px 24px 0 24px;
 }
 .modal__header h2{
     color: var(--NAVY-BLUE, #2E2F42);
@@ -836,13 +837,7 @@ img{
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.48px;
-}
-
-.modal__form input{
-    width: 100%;
-    height: 40px;
-    border: 1px solid var(--lightslate);
-    border-radius: 4px;
+    gap: 4px;
 }
 
 .modal__form__comment label{
@@ -853,7 +848,6 @@ img{
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.48px;
-
 }
 .modal__form__comment textarea{
     display: flex;
@@ -863,16 +857,25 @@ img{
     border: 1px solid var(--lightslate);
     border-radius: 4px;
     padding: 8px 16px;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.48px;
+    margin-top: 4px;
+}
+
+.modal__form__comment textarea:focus-visible{
+    border: 1px solid var(--iris);
+    border-radius: 4px;
+    outline: none;
 }
 
 .modal__form__check{
     display: flex;
-    margin-top: 16px;
 }
 
 .modal__form__check input{
     color: var(--lightslate);
-    margin-right: 8px;
 }
 
 .modal__form__check label{
@@ -886,6 +889,9 @@ img{
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.48px;
+    margin-top: 16px;
+    cursor: pointer;
+    gap: 8px;
 }
 .modal__form__btn{
     display: flex;
@@ -911,9 +917,56 @@ img{
     letter-spacing: 0.64px;
     transition: background-color cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
+    cursor: pointer;
 }
 
+.modal__policy{
+    text-decoration: underline;
+    color: var(--iris);
+}
+
+.modal__policy:hover{
+    color: var(--ocean);
+}
 .modal__form__btn button:hover{
     background-color: var(--ocean);
 }
 
+.modal__form{
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.modal__form__input input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--lightslate);
+    border-radius: 4px;
+    padding-left: 38px;
+    transition: border cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+
+.modal__form__input svg{
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    left: 16px;
+    transition: fill cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
+}
+.modal__form__input{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.modal__form__input input:focus-visible{
+    border: 1px solid var(--iris);
+    border-radius: 4px;
+    outline: none;
+}
+
+.modal__form__input:focus-within svg{
+    fill: var(--iris);
+}
