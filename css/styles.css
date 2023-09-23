@@ -948,10 +948,12 @@ img{
 }
 
 .modal__form__input svg{
+    fill: var(--navybluemodal);
     height: 18px;
     width: 18px;
     position: absolute;
     left: 16px;
+    top: 46%;
     transition: fill cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
 }
@@ -969,4 +971,8 @@ img{
 
 .modal__form__input:focus-within svg{
     fill: var(--iris);
+}
+
+.modal__form__input .svg__input{
+    top: 50%;
 }
