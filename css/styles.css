@@ -841,6 +841,8 @@ img{
 }
 
 .modal__form__comment label{
+    display: flex;
+    flex-direction: column;
     color: var(--lightslate);
     font-family: Roboto;
     font-size: 12px;
@@ -848,10 +850,9 @@ img{
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.48px;
+    gap: 4px;
 }
 .modal__form__comment textarea{
-    display: flex;
-    flex-direction: column;
     resize: none;
     width: 100%;
     border: 1px solid var(--lightslate);
@@ -861,21 +862,35 @@ img{
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.48px;
-    margin-top: 4px;
 }
 
 .modal__form__comment textarea:focus-visible{
     border: 1px solid var(--iris);
     border-radius: 4px;
+    fill: var(--cloud);
     outline: none;
 }
 
 .modal__form__check{
     display: flex;
+    margin-top: 16px;
 }
 
 .modal__form__check input{
-    color: var(--lightslate);
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+    border: none;
+}
+
+.modal__form__check input:checked + svg{
+    border: 0;
+    background-color: var(--ocean);
+    fill: white;
+    transition: background-color fill cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 
 .modal__form__check label{
@@ -889,9 +904,18 @@ img{
     font-weight: 400;
     line-height: 14px;
     letter-spacing: 0.48px;
-    margin-top: 16px;
     cursor: pointer;
-    gap: 8px;
+    gap: 4px;
+}
+.modal__checkmark__svg{
+    height: 16px;
+    width: 16px;
+    border: 1px solid var(--lightslate);
+    border-radius: 2px;
+    padding: 4px 2.9px;
+    fill: transparent;
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 250ms;
 }
 .modal__form__btn{
     display: flex;
