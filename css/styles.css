@@ -861,6 +861,7 @@ img{
     font-size: 12px;
     line-height: 14px;
     letter-spacing: 0.48px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .modal__form__comment textarea:focus-visible{
@@ -869,7 +870,9 @@ img{
     fill: var(--cloud);
     outline: none;
 }
-
+.modal__form__comment:hover textarea{
+    border: 1px solid var(--iris);
+}
 .modal__form__check{
     display: flex;
     margin-top: 16px;
@@ -998,4 +1001,12 @@ img{
 
 .modal__form__input .svg__input{
     top: 50%;
+}
+
+.modal__form__input:hover input{
+    border: 1px solid var(--iris);
+}
+
+.modal__form__input:hover svg{
+    fill: var(--iris);
 }
